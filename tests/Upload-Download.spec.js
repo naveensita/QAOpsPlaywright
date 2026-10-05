@@ -49,7 +49,6 @@ test("Upload download excel validation.", async({page})=>{
     const textLocator = page.getByText(textSearch);
     const desiredRow = await page.getByRole('row').filter({has : textLocator});
     await expect(desiredRow.locator("#cell-4-undefined")).toContainText(updateValue.toString());
-    //await page.pause();
 
 
 });

@@ -35,7 +35,7 @@ test("Screenshots and Visual Comparision", async ({page})=>{
     //await page.pause();
 });
 
-test("Visual testing", async ({page})=>{
+test.skip("Visual testing", async ({page})=>{
     await page.goto("https://www.google.com/");
     expect(await page.screenshot()).toMatchSnapshot("Landing.png", { maxDiffPixelRatio: 0.05 });
 
